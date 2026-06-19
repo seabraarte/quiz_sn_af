@@ -1,0 +1,1 @@
+Nesta simples página você pode testar seus conhecimentos em Service Now Administrator Fundamentals, se preparando para a certificação. São 400 perguntas aleatórias e você pode selecionar quantas quiser para sua prova e personalizar se deseja que a cada prova as alternativas sejam embaralhadas.
