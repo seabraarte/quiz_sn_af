@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+	<link rel="stylesheet" href="css/style.css">
+    <title>Quiz ServiceNow</title>
+
+</head>
+<body>
+
+	<button class="theme-toggle" onclick="toggleTheme()">
+	🌙 Tema
+	</button>
+
+    <h1>Quiz ServiceNow Administrator Fundamentals</h1>
+	
+	<div id="config">
+
+    <h2>Configuração da Prova</h2>
+
+    <div class="config-item">
+        <label>
+            Número de perguntas sorteadas:
+        </label>
+
+        <input
+            type="number"
+            id="numPerguntas"
+            value="10"
+            min="1"
+            max="100">
+    </div>
+
+    <div class="config-item">
+
+        <label>
+
+            <input
+                type="checkbox"
+                id="embaralharAlternativas"
+                checked>
+
+            Embaralhar alternativas
+
+        </label>
+
+    </div>
+
+    <button id="btnIniciar">
+        Iniciar Prova
+    </button>
+
+</div>
+	
+    <div id="quiz"></div>
+    <button id="btnFinalizar" style="display:none">
+        Finalizar
+    </button>
+	
+    <div id="resultado"></div>
+	<button id="btnReiniciar" style="display:none">
+        Reiniciar
+    </button>
+    <script src="js/script.js"></script>
+<footer id="footer">
+    Por Renato Seabra | seabraarte@gmail.com - Dúvidas, críticas e sugestões.
+</footer>
+</body>
+</html>
