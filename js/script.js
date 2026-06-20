@@ -32,9 +32,18 @@ function renderizarPerguntas() {
 
         div.className = "question";
 
-        let html = `
-            <h3>${indice + 1}. ${pergunta.question}</h3>
-        `;
+       let html = `
+		    <h3>${indice + 1}. ${pergunta.question}</h3>
+		
+		    <button
+		        type="button"
+		        class="btnIA"
+		        onclick="perguntarIA(${indice})">
+		        	Perguntar à IA
+		    </button>
+		
+		    <br><br>
+		`;
 		
 		if(pergunta.image){
 			html += `
@@ -262,6 +271,51 @@ function reiniciarQuiz(){
         behavior: "smooth"
     });
 
+}
+
+function perguntarIA(pergunta, alternativas) {
+
+  const letras = ["A", "B", "C", "D", "E", "F"];
+
+  const textoAlternativas = alternativas
+    .map((alt, i) => `${letras[i]}) ${alt}`)
+    .join("\n");
+
+  const prompt = `
+Você é um ServiceNow Certified System Administrator expert.
+
+Analise a questão da prova de certificação e responda de forma didática.
+
+Question:
+${pergunta}
+
+Options:
+${textoAlternativas}
+
+Instruções:
+1. Identifique a resposta correta.
+2. Explique por que ela está correta.
+3. Explique por que as outras opções estão incorretas.
+4. Mantenha a explicação concisa e focada no exame CSA.
+5. Se possível, traga referências de Youtube para estudar.
+
+Retorne a resposta neste formato:
+
+Resposta correta: <letra>
+
+Explicação:
+<sua explicação>
+`;
+
+	if (pergunta.type === "multiple") {
+	    prompt += "\nThis question may have multiple correct answers.";
+	}
+
+  const url =
+    "https://chatgpt.com/?q=" +
+    encodeURIComponent(prompt);
+
+  window.open(url, "_blank");
 }
 
 document
