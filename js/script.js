@@ -76,7 +76,7 @@ function renderizarPerguntas() {
 		    <button
 		        type="button"
 		        class="btnIA"
-		        onclick="perguntarIA(${pergunta.question, opcoesEmbaralhadas})">
+		        onclick="perguntarIA(${indice})">
 		        	Perguntar à IA
 		    </button>
 		
@@ -275,21 +275,23 @@ function reiniciarQuiz(){
 
 }
 
-function perguntarIA(pergunta, alternativas) {
+function perguntarIA(indice) {
 
-  const letras = ["A", "B", "C", "D", "E", "F"];
+    const pergunta = perguntasSelecionadas[indice];
 
-  const textoAlternativas = alternativas
-    .map((alt, i) => `${letras[i]}) ${alt}`)
-    .join("\n");
+    const letras = ["A", "B", "C", "D", "E", "F"];
 
-  const prompt = `
-Você é um ServiceNow Certified System Administrator expert.
+    const textoAlternativas = pergunta.options
+        .map((alt, i) => `${letras[i]}) ${alt}`)
+        .join("\n");
 
-Analise a questão da prova de certificação e responda de forma didática.
+    let prompt = `
+Você é um especialista em ServiceNow Certified System Administrator (CSA).
+
+Analise a questão abaixo.
 
 Question:
-${pergunta}
+${pergunta.question}
 
 Options:
 ${textoAlternativas}
@@ -299,9 +301,9 @@ Instruções:
 2. Explique por que ela está correta.
 3. Explique por que as outras opções estão incorretas.
 4. Mantenha a explicação concisa e focada no exame CSA.
-5. Se possível, traga referências de Youtube para estudar.
+5. Se possível, traga referências de YouTube para estudo.
 
-Retorne a resposta neste formato:
+Retorne neste formato:
 
 Resposta correta: <letra>
 
@@ -309,15 +311,15 @@ Explicação:
 <sua explicação>
 `;
 
-	if (pergunta.type === "multiple") {
-	    prompt += "\nThis question may have multiple correct answers.";
-	}
+    if (pergunta.type === "multiple") {
+        prompt += "\nEsta questão pode possuir múltiplas respostas corretas.";
+    }
 
-  const url =
-    "https://chatgpt.com/?q=" +
-    encodeURIComponent(prompt);
+    const url =
+        "https://chatgpt.com/?q=" +
+        encodeURIComponent(prompt);
 
-  window.open(url, "_blank");
+    window.open(url, "_blank");
 }
 
 document
