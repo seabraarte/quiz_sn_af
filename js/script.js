@@ -74,11 +74,34 @@ function renderizarPerguntas() {
 
 		html += `
 		    <button
-		        type="button"
-		        class="btnIA"
-		        onclick="perguntarIA(${indice})">
-		        	Perguntar à IA
-		    </button>
+			    type="button"
+			    onclick="perguntarIA(${indice})"
+			    style="
+			        display: inline-flex;
+			        align-items: center;
+			        gap: 8px;
+			        margin-top: 10px;
+			        padding: 10px 14px;
+			        border: none;
+			        border-radius: 10px;
+			        cursor: pointer;
+			
+			        background: linear-gradient(135deg, #10a37f, #1bd1a0);
+			        color: white;
+			        font-size: 14px;
+			        font-weight: 600;
+			
+			        box-shadow: 0 6px 18px rgba(16, 163, 127, 0.25);
+			        transition: all 0.2s ease;
+			
+			        user-select: none;
+			    "
+			    onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 10px 22px rgba(16,163,127,0.35)'"
+			    onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 6px 18px rgba(16,163,127,0.25)'"
+			>
+			    🤖 Perguntar à IA
+			    <span style="font-size: 12px; opacity: 0.9;">↗</span>
+			</button>
 		`;
 
         div.innerHTML = html;
