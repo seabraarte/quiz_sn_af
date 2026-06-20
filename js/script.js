@@ -34,15 +34,6 @@ function renderizarPerguntas() {
 
        let html = `
 		    <h3>${indice + 1}. ${pergunta.question}</h3>
-		
-		    <button
-		        type="button"
-		        class="btnIA"
-		        onclick="perguntarIA(${indice})">
-		        	Perguntar à IA
-		    </button>
-		
-		    <br><br>
 		`;
 		
 		if(pergunta.image){
@@ -80,6 +71,17 @@ function renderizarPerguntas() {
 				<br>
 			`;
 		});
+
+		html += `
+		    <button
+		        type="button"
+		        class="btnIA"
+		        onclick="perguntarIA(${pergunta.question, opcoesEmbaralhadas})">
+		        	Perguntar à IA
+		    </button>
+		
+		    <br><br>
+		`;
 
         div.innerHTML = html;
 
