@@ -295,11 +295,12 @@ function perguntarIA(indice) {
 		${textoAlternativas}
 		
 		Instruções:
-		1. Identifique a resposta correta.
-		2. Explique por que ela está correta.
-		3. Explique por que as outras opções estão incorretas.
-		4. Mantenha a explicação concisa e focada no exame CSA.
-		5. Se possível, traga referências de YouTube para estudo.
+		1. Reescreva as alternativas apresentadas em inglês.
+		2. Identifique a resposta correta.
+		3. Explique por que ela está correta.
+		4. Explique por que as outras opções estão incorretas.
+		5. Mantenha a explicação concisa e focada no exame CSA.
+		6. Se possível, traga referências de YouTube para estudo.
 		
 		Retorne neste formato:
 		
