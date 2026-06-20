@@ -2146,7 +2146,7 @@
     "type": "multiple"
   },
   {
-    "question": "Two departments (HR Onboarding and Facilities) have come to you, asking for a way for employees to request event room set up services. The requirements are the same for the form and the task routing to the Facilities' assignment group. ✑ For HR, the item will be used primarily for the Onboarding coordinators, for employee orientation sessions. ✑ For Facilities, the item will be used for anyone in the company who needs room set up services. However, both departments have their own service catalogs. What do you do, to support these requirements?",
+    "question": "Two departments (HR Onboarding and Facilities) have come to you, asking for a way for employees to request event room set up services. The requirements are the same for the form and the task routing to the Facilities' assignment group. \n✑ For HR, the item will be used primarily for the Onboarding coordinators, for employee orientation sessions. \n✑ For Facilities, the item will be used for anyone in the company who needs room set up services. However, both departments have their own service catalogs. What do you do, to support these requirements?",
     "options": [
       "Create one Catalog Item for Event Room Set Up; then publish to the Parent",
       "Catalog, which is accessible to both HR and Facilities.",
@@ -4798,7 +4798,7 @@
     "type": "single"
   },
   {
-    "question": "A user wants to create a set of filter conditions, where they want to show records which satisfy two conditions: ✑ Incidents where the state is Closed ✑ Incidents where Assignment Group is Network After clicking the Funnel icon, what should the user do?",
+    "question": "A user wants to create a set of filter conditions, where they want to show records which satisfy two conditions: \n✑ Incidents where the state is Closed \n✑ Incidents where Assignment Group is Network After clicking the Funnel icon, what should the user do?",
     "options": [
       "Define the first condition; click AND button; define second condition; press enter",
       "Define the first condition; click > icon on breadcrumb, define second condition; click",
