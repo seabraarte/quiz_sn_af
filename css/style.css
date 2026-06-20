@@ -283,3 +283,70 @@ hr{
 .question h3 {
     white-space: pre-line;
 }
+
+
+@media (max-width: 768px) {
+
+    body {
+        padding: 15px;
+        max-width: 100%;
+    }
+
+    h1 {
+        font-size: 1.4rem;
+        margin-bottom: 20px;
+    }
+
+    .question {
+        padding: 15px;
+        margin-bottom: 18px;
+    }
+
+    .question h3 {
+        font-size: 1rem;
+        line-height: 1.4;
+    }
+
+    .question label {
+        padding: 10px;
+        font-size: 0.95rem;
+    }
+
+    button {
+        width: 100%;
+        padding: 12px;
+        font-size: 15px;
+    }
+
+    #config {
+        padding: 15px;
+    }
+
+    #numPerguntas {
+        width: 60px;
+    }
+
+    .theme-toggle {
+        top: 10px;
+        right: 10px;
+        padding: 8px 10px;
+        font-size: 12px;
+    }
+
+    #footer {
+        font-size: 12px;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 768px) {
+    .question label {
+        display: flex;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .question input {
+        margin-top: 3px;
+    }
+}
