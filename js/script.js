@@ -79,8 +79,6 @@ function renderizarPerguntas() {
 		        onclick="perguntarIA(${indice})">
 		        	Perguntar à IA
 		    </button>
-		
-		    <br><br>
 		`;
 
         div.innerHTML = html;
@@ -286,30 +284,30 @@ function perguntarIA(indice) {
         .join("\n");
 
     let prompt = `
-Você é um especialista em ServiceNow Certified System Administrator (CSA).
-
-Analise a questão abaixo.
-
-Question:
-${pergunta.question}
-
-Options:
-${textoAlternativas}
-
-Instruções:
-1. Identifique a resposta correta.
-2. Explique por que ela está correta.
-3. Explique por que as outras opções estão incorretas.
-4. Mantenha a explicação concisa e focada no exame CSA.
-5. Se possível, traga referências de YouTube para estudo.
-
-Retorne neste formato:
-
-Resposta correta: <letra>
-
-Explicação:
-<sua explicação>
-`;
+		Você é um especialista em ServiceNow Certified System Administrator (CSA).
+		
+		Analise a questão abaixo.
+		
+		Question:
+		${pergunta.question}
+		
+		Options:
+		${textoAlternativas}
+		
+		Instruções:
+		1. Identifique a resposta correta.
+		2. Explique por que ela está correta.
+		3. Explique por que as outras opções estão incorretas.
+		4. Mantenha a explicação concisa e focada no exame CSA.
+		5. Se possível, traga referências de YouTube para estudo.
+		
+		Retorne neste formato:
+		
+		Resposta correta: <letra>
+		
+		Explicação:
+		<sua explicação>
+	`;
 
     if (pergunta.type === "multiple") {
         prompt += "\nEsta questão pode possuir múltiplas respostas corretas.";
