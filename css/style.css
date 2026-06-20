@@ -279,3 +279,7 @@ hr{
 
     z-index: 999;
 }
+
+.question h3 {
+    white-space: pre-line;
+}
